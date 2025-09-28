@@ -1,0 +1,52 @@
+body {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+
+  /* Flexbox to center everything */
+  display: flex;
+  flex-direction: column;     /* stack h1 on top of jokes */
+  justify-content: center;    /* vertical center */
+  align-items: center;  
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("joke.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;        /* only affects the background */
+  z-index: -1;         /* send it behind content */
+}
+.jokes {
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-size: larger;
+  margin: 20px auto;
+  width: fit-content;          /* box fits text width */
+  max-width: 600px;            /* prevent too wide on big screens */
+  background: rgba(255, 255, 255, 0.9); /* white with slight transparency */
+  padding: 20px;               /* space inside the box */
+  border-radius: 12px;         /* rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* soft shadow for contrast */
+  align-items: center;
+}
+
+h1 {
+    align-items: center;
+  text-align: center;
+  color: black;
+  margin: 20px auto;
+  width: fit-content;
+  padding: 10px 20px;
+  background: white;          /* solid white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
